@@ -1,0 +1,17 @@
+<h1 class='capitalize'>{{teacher.name}}</h1>
+
+<div ng-repeat="review in reviews" ng-switch on="($index % 2)">
+	<div ng-switch-when='1' class='focus'>
+		<div>
+			Comment: {{review.comment}}
+		</div>
+		<div>Rating: {{review.rating}}</div>
+	</div>
+	<div ng-switch-when='0' class='focus2'>
+		<div>
+			Comment: {{review.comment}}
+		</div>
+		<div>Rating: {{review.rating}}</div>
+	</div>
+	<hr>
+</div>

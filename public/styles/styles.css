@@ -1,0 +1,117 @@
+.b {
+	font-weight: bold;
+	font-size: 1.25em;
+}
+.focus {
+	font-size: 1.4em;
+}
+.clickable {
+	cursor: pointer;
+	text-align: center;
+	width: 100%;
+	padding: 0px;
+	margin-bottom: 1px;
+}
+.nav {
+	border-bottom: 1px solid black;
+	margin: 10px;
+	height: 80px;
+}
+li {
+	text-decoration: none;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+.third {
+	display: inline;
+}
+.center {
+	text-align: center;
+}
+.focus2 {
+	background: #34d93f;
+	background-image: -webkit-linear-gradient(top, #34d93f, #63b82b);
+	background-image: -moz-linear-gradient(top, #34d93f, #63b82b);
+	background-image: -ms-linear-gradient(top, #34d93f, #63b82b);
+	background-image: -o-linear-gradient(top, #34d93f, #63b82b);
+	background-image: linear-gradient(to bottom, #34d93f, #63b82b);
+}
+.focus2:hover {
+	background: #3cfc89;
+	background-image: -webkit-linear-gradient(top, #3cfc89, #34d955);
+	background-image: -moz-linear-gradient(top, #3cfc89, #34d955);
+	background-image: -ms-linear-gradient(top, #3cfc89, #34d955);
+	background-image: -o-linear-gradient(top, #3cfc89, #34d955);
+	background-image: linear-gradient(to bottom, #3cfc89, #34d955);
+	text-decoration: none;
+}
+.button,
+.focus,
+.focus2 {
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 1.4em;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+.button,
+.focus {
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+}
+.button:hover,
+.focus:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+.button {
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	font-size: 1.2em;
+}
+.rate {
+	width: 10%;
+}
+.teacher {
+	width: 90%;
+}
+.rate,
+.teacher {
+	display: inline;
+}
+.teachers {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-content: flex-start;
+	text-align: center;
+}
+.space {
+	padding: 10px;
+	font-family: Arial;
+	font-size 18px;
+	border: 1px ridge grey;
+	border-radius: 28px;
+	width: 325px;
+	float: left;
+}
+.split {
+	display: inline;
+	margin: 20px;
+}
+.right {
+	display: inline;
+	float: right;
+	margin: 20px 0;
+}

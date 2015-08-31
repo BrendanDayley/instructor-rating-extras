@@ -1,0 +1,13 @@
+<div>
+	<form name='addReview' class='css-form' novalidate>
+		Rating 1-5:
+		<input type="number" ng-model='review.rating' name='rating' min="1" max="5" required='true' />
+		<br />
+		<div ng-show='form.$submitted || form.teacherName.$touched'>
+			<div ng-show="form.schoolName.$error.required">You must submit a rating.</div>
+		</div>
+		<input type="text" placeholder="Comments" ng-model='review.comment' />
+		<hr />
+		<input type="button" ng-click="update(review)" ui-sref="reviews({teacher_id: teacherId})" value="Submit" />
+	</form>
+</div>

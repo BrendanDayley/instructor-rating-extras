@@ -1,0 +1,22 @@
+<div class="homeContainer">
+	<h1 class="center">Welcome to Instructor Rating </h1>
+	<div class="nav">
+		<div class="right">
+			<h2 class="split">Don't see your School?</h2>
+			<a class="split button" ui-sref="createUniversity">New School</a>
+		</div>
+		<div class="space split">
+			Search Schools:
+			<input type='text' ng-model="search.name" />
+		</div>
+	</div>
+	<div class='listings' ng-repeat="university in universities | filter:search" ng-switch on="($index % 2)" ui-sref='teachers({ university_id: university._id })'>
+
+		<div ng-switch-when='0' class='clickable focus '>
+			<b class='capitalize'>{{university.name}}</b>
+		</div>
+		<div ng-switch-when='1' class='clickable focus2 '>
+			<b class='capitalize'>{{university.name}}</b>
+		</div>
+	</div>
+</div>

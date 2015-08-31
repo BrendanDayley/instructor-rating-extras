@@ -1,0 +1,26 @@
+<div class='container'>
+	<div class="nav">
+		<div class="right">
+			<h2 class="split">Don't see your teacher?</h2>
+			<a class="button split" ui-sref="teachers.newTeacher">Create Teacher</a>
+		</div>
+		<div class="space split">
+			Search teachers:
+			<input type='text' ng-model="search.name" />
+		</div>
+	</div>
+	<div ui-view></div>
+	<hr />
+
+	<div ng-repeat="teacher in teachers" ng-switch on="($index % 2)">
+		<div ng-switch-when='0' class='teachers '>
+			<div class='b capitalize teacher focus' ui-sref='reviews({teacher_id: teacher._id})'>{{teacher.name}}</div>
+			<div class='focus2 rate' ui-sref='newReview({teacher_id: teacher._id})'>Rate Me!</div>
+		</div>
+
+		<div ng-switch-when='1' class='teachers '>
+			<div class='b capitalize teacher focus2' ui-sref='reviews({teacher_id: teacher._id})'>{{teacher.name}}</div>
+			<div class='focus rate' ui-sref='newReview({teacher_id: teacher._id})'>Rate Me!</div>
+		</div>
+	</div>
+</div>
