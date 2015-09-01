@@ -7,11 +7,6 @@ var teacherSchema = new Schema({
 		unique: true,
 		index: true
 	},
-	university: {
-		required: true,
-		type: Schema.Types.ObjectId,
-		ref: 'University'
-	}
 });
 
 module.exports = mongoose.model('Teacher', teacherSchema);

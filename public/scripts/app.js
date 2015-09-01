@@ -13,19 +13,19 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		controller: 'universityCtrl'
 	})
 
-	.state('teachers', {
-		url: '/university/:university_id',
-		templateUrl: 'views/teacher.html',
-		controller: 'getTeachersCtrl'
-	})
+	//	.state('teachers', {
+	//		url: '/university/:university_id',
+	//		templateUrl: 'views/teacher.html',
+	//		controller: 'getTeachersCtrl'
+	//	})
 
-	.state('teachers.newTeacher', {
-		templateUrl: 'views/newTeacher.html',
-		controller: 'newTeacherCtrl'
-	})
+	//	.state('teachers.newTeacher', {
+	//		templateUrl: 'views/newTeacher.html',
+	//		controller: 'newTeacherCtrl'
+	//	})
 
 	.state('reviews', {
-		url: '/reviews/:teacher_id',
+		url: '/reviews/:class_id',
 		templateUrl: 'views/reviews.html',
 		controller: 'reviewCtrl'
 	})
@@ -37,10 +37,20 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 	})
 
 	.state('newReview', {
-		url: '/newReview/:teacher_id',
-		templateUrl: 'views/newReview.html',
-		controller: 'newReviewCtrl'
-	})
+			url: '/newReview/:class_id',
+			templateUrl: 'views/newReview.html',
+			controller: 'newReviewCtrl'
+		})
+		.state('classes', {
+			url: '/classes/:university_id',
+			templateUrl: 'views/class.html',
+			controller: 'classCtrl'
+		})
+		.state('newClass', {
+			url: 'classes/:university_id',
+			templateUrl: 'views/newclass.html',
+			controller: 'newClassCtrl'
+		})
 
 
 });

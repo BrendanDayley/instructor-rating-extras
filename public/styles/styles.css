@@ -15,7 +15,8 @@
 .nav {
 	border-bottom: 1px solid black;
 	margin: 10px;
-	height: 80px;
+	height: auto;
+	overflow: auto
 }
 li {
 	text-decoration: none;
@@ -114,4 +115,13 @@ li {
 	display: inline;
 	float: right;
 	margin: 20px 0;
+}
+.max-width {
+	width: 80%;
+	margin: auto;
+}
+.navbar-brand {
+	position: absolute;
+	top: 10px;
+	left: 10px;
 }

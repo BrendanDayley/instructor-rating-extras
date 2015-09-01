@@ -8,15 +8,15 @@ var reviewSchema = new Schema({
 	},
 	rating: {
 		type: Number,
-		required: true,
+		required: true
 	},
 	comment: {
 		type: String,
-		required: false,
+		required: false
 	},
-	teacherId: {
+	classId: {
 		type: Schema.Types.ObjectId,
-		ref: 'Teacher',
+		ref: 'Classes',
 		required: true
 	},
 });

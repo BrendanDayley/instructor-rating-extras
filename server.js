@@ -34,15 +34,18 @@ app.post('/api/universities', universityCtrl.create);
 //	TEACHERS
 app.get('/api/teachers/:university', teacherCtrl.read);
 app.post('/api/teachers', teacherCtrl.create);
-app.get('/api/teachers/teacher_id/:teacher_id', teacherCtrl.read2);
+app.get('/api/teachers/teacher_name/:teacher_name', teacherCtrl.findTeacherById);
 
 //	USERS
 app.get('/api/users', userCtrl.read);
 app.post('/api/users', userCtrl.create);
 
 //	REVIEWS
-app.get('/api/reviews/:teacherId', reviewCtrl.read);
+app.get('/api/reviews/:classId', reviewCtrl.read);
 app.post('/api/reviews', reviewCtrl.create);
+
+app.get('/api/classes/:university', classCtrl.read);
+app.post('/api/classes', classCtrl.create);
 
 //===================================================================
 
@@ -57,10 +60,10 @@ mongoose.connection.once('open', function () {
 	console.log('hacking in at: ', mongoUri);
 });
 
-app.listen(port, function() {
+app.listen(port, function () {
 	console.log('the nsa is watching you through port: ', port);
 });
 
 process.on('uncaughtException', function (err) {
-    console.log(err);
+	console.log(err);
 });

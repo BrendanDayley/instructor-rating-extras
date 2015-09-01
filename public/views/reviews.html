@@ -1,4 +1,13 @@
-<h1 class='capitalize'>{{teacher.name}}</h1>
+<h1 class='capitalize'>Class: {{class.name}} </h1>
+<h1 class='capitalize'>{{class.teacherName}}</h1>
+<hr />
+
+<div class="nav">
+	<div class="right">
+		<h2 class="split">Rate This Class</h2>
+		<a class="split button" ui-sref="newReview({ class_id: class._id})">Rate</a>
+	</div>
+</div>
 
 <div ng-repeat="review in reviews" ng-switch on="($index % 2)">
 	<div ng-switch-when='1' class='focus'>

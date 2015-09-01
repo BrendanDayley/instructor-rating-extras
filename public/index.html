@@ -14,10 +14,7 @@
 		<div class="navbar-header">
 
 		</div>
-		<div class="nav navbar-nav">
-			<a class="navbar-brand button" ui-sref="home">Home</a>
-			<!--			<a class="button" ui-sref="home">Universities</a>-->
-		</div>
+		<a class="navbar-brand button" ui-sref="home">Home</a>
 	</nav>
 
 
@@ -27,7 +24,7 @@
 
 
 
-	<div class="view">
+	<div class="view max-width">
 		<div ui-view></div>
 	</div>
 
@@ -52,11 +49,21 @@
 	<script src="scripts/app.js"></script>
 
 	<!--		CONTROLLERS		-->
-	<script src="scripts/ctrls/mainCtrl.js"></script>
+	<script src="scripts/ctrls/classCtrl.js"></script>
+	<script src="scripts/ctrls/universityCtrl.js"></script>
+	<script src="scripts/ctrls/reviewCtrl.js"></script>
+	<script src="scripts/ctrls/newUniversityCtrl.js"></script>
+	<script src="scripts/ctrls/newTeacherCtrl.js"></script>
+	<script src="scripts/ctrls/newReviewCtrl.js"></script>
+	<script src="scripts/ctrls/getTeachersCtrl.js"></script>
+	<script src="scripts/ctrls/newClassCtrl.js"></script>
 	<script src=""></script>
 
 	<!--		SERVICES			-->
-	<script src="scripts/services/mainService.js"></script>
+	<script src="scripts/services/classService.js"></script>
+	<script src="scripts/services/reviewService.js"></script>
+	<script src="scripts/services/teacherService.js"></script>
+	<script src="scripts/services/universityService.js"></script>
 	<script src=""></script>
 
 	<!--		DIRECTIVES		-->

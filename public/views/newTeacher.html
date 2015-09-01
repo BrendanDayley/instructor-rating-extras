@@ -1,17 +1,13 @@
 <div>
 	<form name='addTeacher' class='css-form' novalidate>
-		Teacher Name:
-		<input type="text" ng-model='teacher.name' name='teacherName' required='' />
+		Class Name:
+		<input type="text" ng-model='class.name' name='className' required='' />
 		<br />
 		<div ng-show='form.$submitted || form.teacherName.$touched'>
-			<div ng-show="form.schoolName.$error.required">The Teachers name is required.</div>
+			<div ng-show="form.schoolName.$error.required">The Classes name is required.</div>
 		</div>
 
-
-
-
-		<input type="button" ng-click="reset(form)" value="Reset" />
-		<input type="button" ng-click="update(teacher)" value="Submit" />
+		<input type="button" ng-click="update(class)" value="Submit" />
 
 		<pre>form = {{teacher}}</pre>
 	</form>

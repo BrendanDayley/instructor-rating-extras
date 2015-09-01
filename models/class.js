@@ -2,18 +2,17 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var classSchema = new Schema({
-	universityId: {
+	university: {
 		type: Schema.Types.ObjectId,
 		ref: 'University'
 	},
-	teacherId: {
+	teacher: {
 		type: Schema.Types.ObjectId,
 		ref: 'Teacher'
 	},
-	classNumber: {
+	teacherName: {
 		type: String,
 		required: true,
-		unique: true,
 	},
 	name: {
 		type: String,
@@ -21,4 +20,4 @@ var classSchema = new Schema({
 	},
 });
 
-module.exports = mongoose.model('Class', classSchema);
+module.exports = mongoose.model('Classes', classSchema);
