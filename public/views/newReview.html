@@ -1,10 +1,15 @@
 <div>
-	<form name='addReview' class='css-form color2' novalidate>
-		Rating 1-5:
-		<input type="number" ng-model='review.rating' name='rating' min="1" max="5" required='true' />
-		<br />
-		<textarea rows="5" cols="35" placeholder="Comments: 150 characters" ng-model="review.comment" maxlength="150" />
-		<hr />
-		<input type="button" class="button" ng-click="update(review)" ui-sref="reviews({class_id: classId})" value="Submit" />
-	</form>
+	<h1 class="center header">Create a Review </h1>
+	<div class="container">
+		<div class="css-form color2">
+			<form name='addReview' class='' novalidate>
+				Rating 1-5:
+				<input type="number" ng-model='review.rating' name='rating' min="1" max="5" required='true' />
+				<br />
+				<textarea rows="5" cols="35" placeholder="Comments: 150 characters" ng-model="review.comment" maxlength="150" />
+				<hr />
+				<input type="button" class="button" ng-click="update(review)" ui-sref="reviews({class_id: classId})" value="Submit" />
+			</form>
+		</div>
+	</div>
 </div>

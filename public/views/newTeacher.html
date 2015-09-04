@@ -1,14 +1,17 @@
 <div>
-	<form name='addTeacher form' class='css-form' novalidate>
-		Class Name:
-		<input type="text" ng-model='class.name' name='className' required='' />
-		<br />
-		<div ng-show='form.$submitted || form.teacherName.$touched'>
-			<div ng-show="form.schoolName.$error.required">The Classes name is required.</div>
-		</div>
+	<h1 class="center header">Add a Teacher </h1>
+	<div>
+		<form name='addTeacher form' class='css-form' novalidate>
+			Class Name:
+			<input type="text" ng-model='class.name' name='className' required='' />
+			<br />
+			<div ng-show='form.$submitted || form.teacherName.$touched'>
+				<div ng-show="form.schoolName.$error.required">The Classes name is required.</div>
+			</div>
 
-		<input type="button" ng-click="update(class)" value="Submit" />
+			<input type="button" ng-click="update(class)" value="Submit" />
 
-		<pre>form = {{teacher}}</pre>
-	</form>
+			<pre>form = {{teacher}}</pre>
+		</form>
+	</div>
 </div>
