@@ -28,7 +28,8 @@ li {
 	text-align: center;
 }
 .focus2,
-.color2 {
+.color2,
+.button2 {
 	background: #34d93f;
 	background-image: -webkit-linear-gradient(top, #34d93f, #63b82b);
 	background-image: -moz-linear-gradient(top, #34d93f, #63b82b);
@@ -49,12 +50,15 @@ li {
 .focus,
 .focus2,
 .color1,
-.color2 {
+.color2,
+.button2,
+.button3 {
 	color: #ffffff;
 	font-family: Arial;
 	font-size: 1.4em;
 	padding: 10px 20px;
 	text-decoration: none;
+	border-radius: 5px;
 }
 .button,
 .focus,
@@ -82,6 +86,7 @@ li {
 	border-radius: 28px;
 	font-size: 1.2em;
 	cursor: pointer;
+	border: 0px;
 }
 .rate {
 	width: 10%;
@@ -100,13 +105,13 @@ li {
 	align-content: flex-start;
 	text-align: center;
 }
-.space {
+.button2 {
+	color: #fff;
 	padding: 10px;
 	font-family: Arial;
-	font-size 18px;
-	border: 1px ridge grey;
+	font-size 1.4em;
 	border-radius: 28px;
-	width: 325px;
+	width: 355px;
 	float: left;
 }
 .split {
@@ -131,13 +136,26 @@ li {
 	position: absolute;
 	top: 15%;
 	left: 15%;
+	padding: 20px;
+	border: 1px solid #3498db;
+	border-radius: 20px;
+	background: #34d93f;
+	background-image: -webkit-linear-gradient(top, #34d93f, #63b82b);
+	background-image: -moz-linear-gradient(top, #34d93f, #63b82b);
+	background-image: -ms-linear-gradient(top, #34d93f, #63b82b);
+	background-image: -o-linear-gradient(top, #34d93f, #63b82b);
+	background-image: linear-gradient(to bottom, #34d93f, #63b82b);
 }
 .classLeft {
 	float: left;
 }
 .classRight {
 	float: right;
-	text-align: right;
+}
+.wrapper {
+	margin: 0px;
+	padding: 10px 20px;
+	height: 26px;
 }
 .classHeader {
 	height: 26px;

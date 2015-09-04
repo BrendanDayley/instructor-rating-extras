@@ -1,10 +1,12 @@
 <div>
-	<form name='addClass' class='css-form' novalidate>
+	<form name='addClass' class='css-form color2' novalidate>
 		Class Name:
-		<input type="text" ng-model='class.name' name='className' required='true' />
+		<input type="text" ng-model='class.name' name='class-name' required='true' />
 		<br /> Instructor Name:
-		<input type="text" ng-model='teacher.name' name='teacherName' required="true">
-		<input type="" class="button" ui-sref="classes({ university_id: universityId})" ng-click="update(class, teacher)" value="Submit" />
+		<input type="text" ng-model='teacher.name' name='teacherName' required="true" />
+		<hr />
+		<input type="button" class="button" ng-click="update(class, teacher)" ui-sref="classes({ university_id: universityId})" value="Submit" />
 
 	</form>
+
 </div>
