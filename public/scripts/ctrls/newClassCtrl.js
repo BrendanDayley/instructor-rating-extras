@@ -2,7 +2,6 @@ app.controller('newClassCtrl', function ($scope, classService, $stateParams, $st
 	$scope.universityId = $stateParams.university_id;
 	$scope.update = function (myClass, teacher) {
 
-
 		teacher.university = $scope.universityId;
 		myClass.universityId = $scope.universityId;
 
@@ -11,9 +10,12 @@ app.controller('newClassCtrl', function ($scope, classService, $stateParams, $st
 			myClass.university = $scope.universityId;
 			myClass.teacherId = res.data._id;
 			myClass.teacherName = res.data.name;
-			console.log(myClass);
 
-			classService.addClass(myClass).then(function (res) {});
+			classService.addClass(myClass).then(function (res) {
+				$state.go($state.current, {}, {
+					reload: true
+				});
+			});
 		})
 
 

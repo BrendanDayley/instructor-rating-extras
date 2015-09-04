@@ -34,7 +34,7 @@ app.post('/api/universities', universityCtrl.create);
 //	TEACHERS
 app.get('/api/teachers/:university', teacherCtrl.read);
 app.post('/api/teachers', teacherCtrl.create);
-app.get('/api/teachers/teacher_name/:teacher_name', teacherCtrl.findTeacherById);
+app.get('/api/teachers/teacher_name/:teacher_name', teacherCtrl.findTeacherByName);
 
 //	USERS
 app.get('/api/users', userCtrl.read);
@@ -44,7 +44,9 @@ app.post('/api/users', userCtrl.create);
 app.get('/api/reviews/:classId', reviewCtrl.read);
 app.post('/api/reviews', reviewCtrl.create);
 
+
 app.get('/api/classes/:university', classCtrl.read);
+app.get('/api/classes/class/id/:classId', classCtrl.findById);
 app.post('/api/classes', classCtrl.create);
 
 //===================================================================

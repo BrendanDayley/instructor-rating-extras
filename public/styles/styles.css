@@ -2,9 +2,6 @@
 	font-weight: bold;
 	font-size: 1.25em;
 }
-.focus {
-	font-size: 1.4em;
-}
 .clickable {
 	cursor: pointer;
 	text-align: center;
@@ -30,7 +27,8 @@ li {
 .center {
 	text-align: center;
 }
-.focus2 {
+.focus2,
+.color2 {
 	background: #34d93f;
 	background-image: -webkit-linear-gradient(top, #34d93f, #63b82b);
 	background-image: -moz-linear-gradient(top, #34d93f, #63b82b);
@@ -49,7 +47,9 @@ li {
 }
 .button,
 .focus,
-.focus2 {
+.focus2,
+.color1,
+.color2 {
 	color: #ffffff;
 	font-family: Arial;
 	font-size: 1.4em;
@@ -57,7 +57,8 @@ li {
 	text-decoration: none;
 }
 .button,
-.focus {
+.focus,
+.color1 {
 	background: #3498db;
 	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
 	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
@@ -80,6 +81,7 @@ li {
 	-moz-border-radius: 28;
 	border-radius: 28px;
 	font-size: 1.2em;
+	cursor: pointer;
 }
 .rate {
 	width: 10%;
@@ -124,4 +126,21 @@ li {
 	position: absolute;
 	top: 10px;
 	left: 10px;
+}
+.css-form {
+	position: absolute;
+	top: 15%;
+	left: 15%;
+}
+.classLeft {
+	float: left;
+}
+.classRight {
+	float: right;
+	text-align: right;
+}
+.classHeader {
+	height: 26px;
+	padding: 10 20;
+	margin: 0;
 }

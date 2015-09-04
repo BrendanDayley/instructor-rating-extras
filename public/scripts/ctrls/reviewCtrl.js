@@ -12,9 +12,7 @@ app.controller('reviewCtrl', function ($scope, reviewService, $stateParams, teac
 
 	classService.getClassById($scope.classId).then(function (res) {
 		$scope.class = res.data[0];
-		console.log(res.data);
-		teacherService.getTeacher($scope.class.teacherId).then(function (res) {
-			console.log(res.data);
+		teacherService.getTeacher($scope.class).then(function (res) {
 			$scope.teacher = res.data[0];
 		})
 	});

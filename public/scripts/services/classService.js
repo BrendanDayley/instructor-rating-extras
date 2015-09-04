@@ -14,7 +14,7 @@ app.service('classService', function ($http, $q) {
 
 	this.getClassById = function (id) {
 		var defer = $q.defer();
-		var url = '/api/classes/' + id;
+		var url = '/api/classes/class/id/' + id;
 		$http({
 			method: 'GET',
 			url: url,

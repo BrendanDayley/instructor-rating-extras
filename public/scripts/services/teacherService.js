@@ -15,7 +15,6 @@ app.service('teacherService', function ($http, $q) {
 	this.getTeacherById = function (id) {
 		var defer = $q.defer();
 		var url = '/api/teachers/' + id;
-		console.log(url);
 		$http({
 			method: 'GET',
 			url: url,
@@ -40,13 +39,11 @@ app.service('teacherService', function ($http, $q) {
 
 	this.getTeacher = function (id) {
 		var defer = $q.defer();
-		console.log(id);
 		var url = '/api/teachers/teacher_name/' + id;
 		$http({
 			method: 'GET',
 			url: url,
 		}).then(function (res) {
-			console.log(res.data);
 			defer.resolve(res);
 		});
 		return defer.promise;

@@ -16,16 +16,16 @@ module.exports = {
 				else res.send(result);
 			});
 	},
-	read2: function (req, res) {
-		Teacher.find({
-				"_id": req.params.teacher_id
-			})
-			.exec(function (err, result) {
-				if (err) return res.status(500).send(err);
-				else res.send(result);
-			});
-	},
-	findTeacherById: function (req, res) {
+//	read2: function (req, res) {
+//		Teacher.find({
+//				"_id": req.params.teacher_id
+//			})
+//			.exec(function (err, result) {
+//				if (err) return res.status(500).send(err);
+//				else res.send(result);
+//			});
+//	},
+	findTeacherByName: function (req, res) {
 		var teacherName = req.params.teacher_name;
 		Teacher.find({
 				"name": teacherName
