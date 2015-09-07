@@ -1,42 +1,43 @@
-<div class='container'>
-	<h1 class="center header">Classes</h1>
+<div class="banner">
+	<h1 class="center">Classes</h1>
 	<div class="nav">
 		<div class="right">
 			<h2 class="split">Don't see your class?</h2>
 			<a class="button split clickable" ui-sref="newClass({university_id: universityId})">Create Class</a>
 		</div>
-		<div class="split button2">
+		<div class="split search">
 			Search teachers:
 			<input type='text' ng-model="search.name" />
 		</div>
 	</div>
-	<div ui-view></div>
-	<hr />
+</div>
+<div ui-view></div>
 
 
-	<div class='color2 classHeader'>
-		<div class="classLeft bold">Class Name </div>
-		<div class="classRight instructorMargin bold">Instructor </div>
-	</div>
+
+<div class='classHeader'>
+	<div class="classLeft bold">Class Name </div>
+	<div class="classRight instructorMargin bold">Instructor </div>
+</div>
 
 
-	<div ng-repeat="class in classes | filter:search.name " ng-switch on="($index % 2)">
-		<div ng-switch-when='0' class='teachers clickable'>
-			<div class='b capitalize teacher focus' ui-sref='reviews({class_id: class._id})'>
-				<div class="classLeft">{{ class.name }}: </div>
-				<div class="classRight">{{ class.teacherName }} </div>
-			</div>
-			<div class='focus2 rate' ui-sref='newReview({ class_id: class._id })'>
-				Rate Me!
-			</div>
+<div ng-repeat="class in classes | filter:search.name " ng-switch on="($index % 2)">
+	<div ng-switch-when='0' class='teachers clickable'>
+		<div class='b capitalize teacher focus' ui-sref='reviews({class_id: class._id})'>
+			<div class="classLeft">{{ class.name }}: </div>
+			<div class="classRight">{{ class.teacherName }} </div>
 		</div>
-
-		<div ng-switch-when='1' class='teachers '>
-			<div class='b capitalize teacher focus2' ui-sref='reviews({ class_id: class._id })'>
-				<div class="classLeft">{{ class.name }}: </div>
-				<div class="classRight">{{ class.teacherName }} </div>
-			</div>
-			<div class='focus rate' ui-sref='newReview({ class_id: class._id })'>Rate Me!</div>
+		<div class='focus2 rate' ui-sref='newReview({ class_id: class._id })'>
+			Rate Me!
 		</div>
 	</div>
+
+	<div ng-switch-when='1' class='teachers '>
+		<div class='b capitalize teacher focus2' ui-sref='reviews({ class_id: class._id })'>
+			<div class="classLeft">{{ class.name }}: </div>
+			<div class="classRight">{{ class.teacherName }} </div>
+		</div>
+		<div class='focus rate' ui-sref='newReview({ class_id: class._id })'>Rate Me!</div>
+	</div>
+</div>
 </div>

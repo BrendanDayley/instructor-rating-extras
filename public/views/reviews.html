@@ -1,14 +1,16 @@
-<h1 class="center header">Reviews </h1>
-<h1 class='capitalize color1 center'>Class: {{class.name}} </h1>
-<h1 class='capitalize color2 center'>Instructor: {{class.teacherName}}</h1>
-<hr />
+<div class="banner">
+	<h1 class="center">Reviews </h1>
+	<h1 class='capitalize center'>Class:{{class.name}} </h1>
+	<h1 class='capitalize center'>Instructor: {{class.teacherName}}</h1>
 
-<div class="nav">
-	<div class="right">
-		<h2 class="split">Rate This Class</h2>
-		<a class="split button" ui-sref="newReview({ class_id: classId})">Rate</a>
+	<div class="nav">
+		<div class="right">
+			<h2 class="split">Rate This Class</h2>
+			<a class="split button" ui-sref="newReview({ class_id: classId})">Rate</a>
+		</div>
 	</div>
 </div>
+<br />
 
 <div ng-repeat="review in reviews" ng-switch on="($index % 2)">
 	<div ng-switch-when='1' class='color1 '>

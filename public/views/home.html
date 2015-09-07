@@ -1,15 +1,17 @@
 <div class="homeContainer">
-	<h1 class="center header">Welcome to Instructor Rating </h1>
-	<div class="nav">
-		<div class="right">
-			<h2 class="split">Don't see your School?</h2>
-			<a class="split button" ui-sref="createUniversity">New School</a>
+	<div class="banner">
+		<h1 class="center">Welcome to Instructor Rating </h1>
+		<div class="nav">
+			<div class="right">
+				<h2 class="split">Don't see your School?</h2>
+				<a class="split button" ui-sref="createUniversity">New School</a>
+			</div>
+			<span class="space search">
+				Search Schools:
+				<input type='text' ng-model="search.name" />
+			</span>
+			<br class='clear'>
 		</div>
-		<div class="space button2">
-			Search Schools:
-			<input type='text' ng-model="search.name" />
-		</div>
-		<br class='clear'>
 	</div>
 	<div class='listings' ng-repeat="university in universities | filter:search" ng-switch on="($index % 2)" ui-sref='classes({ university_id: university._id })'>
 
